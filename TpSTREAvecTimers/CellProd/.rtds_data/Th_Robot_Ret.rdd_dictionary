@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE DictionaryObjects SYSTEM "rtdsDictionaryObjects.dtd">
+
+<DictionaryObjects version="9620" language="sdl" diagramType="prcs">
+<Signal id="SIG1" name="retraitReq">
+<UsingSymbols>
+<SymbolReference symbolId="SYM5" usingKind="input"/>
+</UsingSymbols>
+</Signal>
+<Signal id="SIG2" name="defaillRobotRet" isTimer="TRUE">
+<UsingSymbols>
+<SymbolReference symbolId="SYM33" usingKind="output"/>
+<SymbolReference symbolId="SYM36" usingKind="input"/>
+</UsingSymbols>
+</Signal>
+<Signal id="SIG3" name="retP">
+<UsingSymbols>
+<SymbolReference symbolId="SYM34" usingKind="output"/>
+</UsingSymbols>
+</Signal>
+<Signal id="SIG4" name="Libre">
+<UsingSymbols>
+<SymbolReference symbolId="SYM12" usingKind="input"/>
+</UsingSymbols>
+</Signal>
+<Signal id="SIG5" name="retraitConf">
+<UsingSymbols>
+<SymbolReference symbolId="SYM14" usingKind="output"/>
+</UsingSymbols>
+</Signal>
+<Item id="ITEM1" type="process" name="Th_Robot_Ret" scope="current" formalParameterOrder="-" isFormalParam="FALSE" isSyntype="FALSE">
+<Body>
+<SentSignals>
+<SignalReference id="SIG2"/>
+<SignalReference id="SIG3"/>
+<SignalReference id="SIG5"/>
+</SentSignals>
+<ReceivedSignals>
+<SignalReference id="SIG1"/>
+<SignalReference id="SIG4"/>
+<SignalReference id="SIG2"/>
+</ReceivedSignals>
+</Body>
+</Item>
+<Item id="ITEM10" type="type" name="PID" scope="global" defined="FALSE" anchorItemId="ITEM1" searchPolicy="-1" formalParameterOrder="-" isFormalParam="FALSE" isSyntype="FALSE">
+<UsingSymbols>
+<SymbolReference symbolId="SYM16"/>
+</UsingSymbols>
+</Item>
+<Item id="ITEM11" type="variable" name="panne" parentId="ITEM1" scope="global" defined="FALSE" anchorItemId="ITEM1" searchPolicy="-1" formalParameterOrder="-" isFormalParam="FALSE" isSyntype="FALSE">
+<UsingSymbols>
+<SymbolReference symbolId="SYM22"/>
+<SymbolReference symbolId="SYM23"/>
+</UsingSymbols>
+</Item>
+<Item id="ITEM12" type="variable" name="conv" scope="global" defined="FALSE" anchorItemId="ITEM1" searchPolicy="-1" formalParameterOrder="-" isFormalParam="FALSE" isSyntype="FALSE">
+<UsingSymbols>
+<SymbolReference symbolId="SYM6"/>
+</UsingSymbols>
+</Item>
+<Item id="ITEM13" type="variable" name="panne" parentId="ITEM1" scope="none" variableTypeName="boolean" variableTypeId="ITEM4" formalParameterOrder="-" isFormalParam="FALSE" isSyntype="FALSE">
+<DefiningSymbols>
+<SymbolReference symbolId="SYM16" positions="3,0"/>
+</DefiningSymbols>
+</Item>
+<Item id="ITEM14" type="variable" name="idP" parentId="ITEM1" scope="none" variableTypeName="PID" variableTypeId="ITEM10" formalParameterOrder="-" isFormalParam="FALSE" isSyntype="FALSE">
+<DefiningSymbols>
+<SymbolReference symbolId="SYM16" positions="2,0"/>
+</DefiningSymbols>
+</Item>
+<Item id="ITEM15" type="state" name="Idle" parentId="ITEM1" scope="none" formalParameterOrder="-" isFormalParam="FALSE" isSyntype="FALSE">
+<DefiningSymbols>
+<SymbolReference symbolId="SYM4"/>
+</DefiningSymbols>
+<UsingSymbols>
+<SymbolReference symbolId="SYM17"/>
+<SymbolReference symbolId="SYM2"/>
+</UsingSymbols>
+</Item>
+<Item id="ITEM16" type="timer" name="defaillRobotRet" parentId="ITEM1" scope="none" formalParameterOrder="-" isFormalParam="FALSE" isSyntype="FALSE">
+<DefiningSymbols>
+<SymbolReference symbolId="SYM33"/>
+</DefiningSymbols>
+<UsingSymbols>
+<SymbolReference symbolId="SYM38"/>
+</UsingSymbols>
+</Item>
+<Item id="ITEM17" type="state" name="attConv" parentId="ITEM1" scope="none" formalParameterOrder="-" isFormalParam="FALSE" isSyntype="FALSE">
+<DefiningSymbols>
+<SymbolReference symbolId="SYM11"/>
+</DefiningSymbols>
+<UsingSymbols>
+<SymbolReference symbolId="SYM35"/>
+</UsingSymbols>
+</Item>
+<Item id="ITEM18" type="state" name="DEfaillanceRobotRetrait" parentId="ITEM1" scope="none" formalParameterOrder="-" isFormalParam="FALSE" isSyntype="FALSE">
+<UsingSymbols>
+<SymbolReference symbolId="SYM37"/>
+</UsingSymbols>
+</Item>
+<Item id="ITEM2" type="variable" name="now" scope="global" defined="FALSE" anchorItemId="ITEM1" searchPolicy="-1" formalParameterOrder="-" isFormalParam="FALSE" isSyntype="FALSE">
+<UsingSymbols>
+<SymbolReference symbolId="SYM20"/>
+<SymbolReference symbolId="SYM33"/>
+<SymbolReference symbolId="SYM19"/>
+</UsingSymbols>
+</Item>
+<Item id="ITEM3" type="variable" name="any" scope="global" defined="FALSE" anchorItemId="ITEM1" searchPolicy="-1" formalParameterOrder="-" isFormalParam="FALSE" isSyntype="FALSE">
+</Item>
+<Item id="ITEM4" type="type" name="boolean" scope="global" defined="FALSE" anchorItemId="ITEM1" searchPolicy="-1" formalParameterOrder="-" isFormalParam="FALSE" isSyntype="FALSE">
+<UsingSymbols>
+<SymbolReference symbolId="SYM16"/>
+<SymbolReference symbolId="SYM9"/>
+</UsingSymbols>
+</Item>
+<Item id="ITEM5" type="variable" name="true" scope="global" defined="FALSE" anchorItemId="ITEM1" searchPolicy="-1" formalParameterOrder="-" isFormalParam="FALSE" isSyntype="FALSE">
+<UsingSymbols>
+<SymbolReference symbolId="SYM6"/>
+<SymbolReference symbolId="SYM24"/>
+</UsingSymbols>
+</Item>
+<Item id="ITEM6" type="variable" name="sender" scope="global" defined="FALSE" anchorItemId="ITEM1" searchPolicy="-1" formalParameterOrder="-" isFormalParam="FALSE" isSyntype="FALSE">
+<UsingSymbols>
+<SymbolReference symbolId="SYM15"/>
+</UsingSymbols>
+</Item>
+<Item id="ITEM7" type="variable" name="false" scope="global" defined="FALSE" anchorItemId="ITEM1" searchPolicy="-1" formalParameterOrder="-" isFormalParam="FALSE" isSyntype="FALSE">
+<UsingSymbols>
+<SymbolReference symbolId="SYM22"/>
+<SymbolReference symbolId="SYM9"/>
+<SymbolReference symbolId="SYM25"/>
+</UsingSymbols>
+</Item>
+<Item id="ITEM8" type="variable" name="idP" parentId="ITEM1" scope="global" defined="FALSE" anchorItemId="ITEM1" searchPolicy="-1" formalParameterOrder="-" isFormalParam="FALSE" isSyntype="FALSE">
+<UsingSymbols>
+<SymbolReference symbolId="SYM15"/>
+</UsingSymbols>
+</Item>
+<Item id="ITEM9" type="variable" name="boolean" scope="global" defined="FALSE" anchorItemId="ITEM1" searchPolicy="-1" formalParameterOrder="-" isFormalParam="FALSE" isSyntype="FALSE">
+</Item>
+</DictionaryObjects>

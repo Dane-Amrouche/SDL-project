@@ -1,0 +1,43 @@
+Ä}q(UversionqU5.5.1qUobjectq}q(Useq_to_elt_typeq}qUordered_decl_nodesq]q	((cpragmadev.main.business.l1l111llllll1_opy_
+l111lll11ll1l11_opy_
+q
+oq}q(UtextqUnbrMachines integer = 3qU*_l111lll11ll1l11_opy___1ll1l111lll11l_opy_q(h
+oq}q(hUª/*Max nbr of pLocal processes*/
+synonym nbrMachines integer = 3;
+synonym nbrPieces integer = 10;
+
+/*Type for array of pLocal PIDs*/
+newtype machinesArray
+  Array(Integer, PID)
+endnewtype;qhNU
+identifierqNUtypeqUdatadeclqUchildrenq]q(h(h
+oq}q(hUnbrPieces integer = 10qhhhU2:8qhUsynonymdeclqh]q((h
+oq}q(hUintegerq h(h
+oq!}q"(hhh(h
+oq#}q$(hhhhhhhhhhubhhhhhhubhU2:18q%hUtypenameq&h]q'ub(cpragmadev.main.business.l1l111llllll1_opy_
+l1ll11l1lll11l_opy_
+q(oq)}q*(hUnbrPieces = 10q+hNhUsnglsynonymdeclq,h]q-((h
+oq.}q/(hU	nbrPiecesq0hh!hU2:8q1hUsynonymnameq2h]q3ub(h
+oq4}q5(hU10q6hh!hU2:28q7hU
+synonymvalq8h]q9(h
+oq:}q;(hU10q<hh4hU2:28q=hUnbexprq>h]q?ubaubeubeub(h
+oq@}qA(hU2machinesArray Array ( Integer , PID ) endnewtype ;qBhhhU5:8qChUtypedeclqDh]qE((h
+oqF}qG(hUmachinesArrayqHh(h
+oqI}qJ(hhBhh@hhChhDhhEubhU5:8qKhUtypenameqLh]qMub(h
+oqN}qO(hUArray ( Integer , PID )qPhhIhU6:0qQhU	gnrtrtypeqRh]qS((h
+oqT}qU(hUArrayqVhhNhU6:0qWhU	gnrtrnameqXh]qYub(h
+oqZ}q[(hUIntegerq\hhNhU6:6q]hU
+gnrtrparamq^h]q_(h
+oq`}qa(hUIntegerqbhhZhU6:6qchU	paramtypeqdh]qe(h
+oqf}qg(hUIntegerqhhh`hU6:6qihUtypenameqjh]qkubaubaub(h
+oql}qm(hUPIDqnhhNhU6:15qohU
+gnrtrparamqph]qq(h
+oqr}qs(hUPIDqthhlhU6:15quhU	paramtypeqvh]qw(h
+oqx}qy(hUPIDqzhhrhU6:15q{hUtypenameq|h]q}ubaubaubeubeubeubhU1:8q~hUsynonymdeclqh]qÄ((h
+oqÅ}qÇ(hUintegerqÉh(h
+oqÑ}qÖ(hhh(h
+oqÜ}qá(hhhhhh~hhhhÄubhh~hhhhÄubhU1:20qàhUtypenameqâh]qäub(h(oqã}qå(hUnbrMachines = 3qçhNhh,h]qé((h
+oqè}qê(hUnbrMachinesqëhhÑhU1:8qíhUsynonymnameqìh]qîub(h
+oqï}qñ(hU3hhÑhU1:30qóhU
+synonymvalqòh]qô(h
+oqö}qõ(hU3hhïhU1:30qúhUnbexprqùh]qûubaubeubeubh@heuu.

@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE Diagram SYSTEM "rtdsDiagram.dtd">
+
+<Diagram language="sdl" type="sys" defaultColorsNeedFixing="FALSE" name="CellProd" showMsgData="full" linksCrossingAllowed="FALSE" cellWidthMm="4">
+
+<DiagramPartition name="Part. 0" nbPagesH="2" nbPagesV="1">
+<PageSpecification pageWidth="21.0" pageHeight="29.7" topMargin="0.0" bottomMargin="0.0" leftMargin="0.0" rightMargin="0.0" pageFooter="FALSE" scaleFactor="1.0"/>
+
+<Symbol symbolId="SYMB9" type="sdlSysDgmFrm" xCenter="595" yCenter="420" fixedDimensions="TRUE" width="1146" height="775" color="-" fillColor="-">
+<Description></Description>
+<Text></Text>
+
+<Symbol symbolId="SYMB11" type="sdlText" xCenter="418" yCenter="528" fixedDimensions="FALSE" width="792" height="88" color="#000000" fillColor="#FFFFFF">
+<Description></Description>
+<Text>signal piece(integer), pieceArv(PID),depotReq, usinageReq,remiseReq,retraitReq, depotFini, retP, convLibreM;
+signal depotConf, usinageConf, finUsinage, remiseConf,retraitConf, defaillance, machineEnPanne;
+signal convLibre, depose, Libre;
+signal libererConv, reveil;
+</Text>
+</Symbol>
+
+<Symbol symbolId="SYMB25" type="sdlText" xCenter="253" yCenter="176" fixedDimensions="FALSE" width="264" height="154" color="#000000" fillColor="#FFFFFF">
+<Description></Description>
+<Text>/*Max nbr of pLocal processes*/
+synonym nbrMachines integer = 3;
+synonym nbrPieces integer = 10;
+
+/*Type for array of pLocal PIDs*/
+newtype machinesArray
+  Array(Integer, PID)
+endnewtype;</Text>
+</Symbol>
+</Symbol>
+</DiagramPartition>
+
+<DiagramPartition name="Part. 1" nbPagesH="2" nbPagesV="1">
+<PageSpecification pageWidth="21.0" pageHeight="29.7" topMargin="0.0" bottomMargin="0.0" leftMargin="0.0" rightMargin="0.0" pageFooter="FALSE" scaleFactor="1.0"/>
+
+<Symbol symbolId="SYMB18" type="sdlSysDgmFrm" xCenter="595" yCenter="420" fixedDimensions="TRUE" width="1146" height="775" color="-" fillColor="-">
+<Description></Description>
+<Text></Text>
+
+<Symbol symbolId="SYMB19" type="sdlPrcs" xCenter="979" yCenter="473" fixedDimensions="FALSE" width="132" height="44" color="#000000" fillColor="#C4EFED">
+<Description></Description>
+<Text>Th_Robot_Ret</Text>
+</Symbol>
+
+<Symbol symbolId="SYMB20" type="sdlPrcs" xCenter="187" yCenter="473" fixedDimensions="FALSE" width="132" height="44" color="#000000" fillColor="#C4EFED">
+<Description></Description>
+<Text>Th_Robot_Alim</Text>
+</Symbol>
+
+<Symbol symbolId="SYMB21" type="sdlPrcs" xCenter="572" yCenter="462" fixedDimensions="FALSE" width="220" height="44" color="#000000" fillColor="#C4EFED">
+<Description></Description>
+<Text>Th_Machine (0, nbrMachines)</Text>
+</Symbol>
+
+<Symbol symbolId="SYMB22" type="sdlPrcs" xCenter="572" yCenter="275" fixedDimensions="FALSE" width="198" height="44" color="#000000" fillColor="#C4EFED">
+<Description></Description>
+<Text>Th_Piece (0, nbrPieces)</Text>
+</Symbol>
+
+<Symbol symbolId="SYMB23" type="sdlPrcs" xCenter="572" yCenter="121" fixedDimensions="FALSE" width="110" height="44" color="#000000" fillColor="#C4EFED">
+<Description></Description>
+<Text>Th_Dialogue</Text>
+</Symbol>
+
+<Symbol symbolId="SYMB24" type="sdlPrcs" xCenter="572" yCenter="704" fixedDimensions="FALSE" width="154" height="44" color="#000000" fillColor="#C4EFED">
+<Description></Description>
+<Text>gestionConvoyeur</Text>
+</Symbol>
+</Symbol>
+
+<Link linkId="LINK82" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>cArriveePiece</Text>
+<Connector attachedSymbolId="SYMB18" type="chnl" isOutside="FALSE" side="w" position="-0.686451612903" endType="midarrow">
+<Text id="1">[]</Text>
+<Text id="2"></Text>
+</Connector>
+<Connector attachedSymbolId="SYMB23" type="chnl" isOutside="TRUE" side="y" position="0.0" endType="midarrow">
+<Text id="1">[piece]
+</Text>
+<Text id="2"></Text>
+</Connector>
+<LinkSegment orientation="h" length="572"/>
+
+</Link>
+
+<Link linkId="LINK99" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>cConvRetrait</Text>
+<Connector attachedSymbolId="SYMB19" type="chnl" isOutside="TRUE" side="x" position="0.0" endType="midarrow">
+<Text id="1">[Libre]
+</Text>
+<Text id="2"></Text>
+</Connector>
+<Connector attachedSymbolId="SYMB24" type="chnl" isOutside="TRUE" side="y" position="0.0" endType="midarrow">
+<Text id="1">[retP]
+</Text>
+<Text id="2"></Text>
+</Connector>
+<LinkSegment orientation="v" length="231"/>
+<LinkSegment orientation="h" length="-407"/>
+
+</Link>
+
+<Link linkId="LINK105" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>cConvDepot</Text>
+<Connector attachedSymbolId="SYMB20" type="chnl" isOutside="TRUE" side="x" position="0.0" endType="midarrow">
+<Text id="1">[depose, reveil]
+</Text>
+<Text id="2"></Text>
+</Connector>
+<Connector attachedSymbolId="SYMB24" type="chnl" isOutside="TRUE" side="y" position="0.0" endType="midarrow">
+<Text id="1">[convLibre]
+</Text>
+<Text id="2"></Text>
+</Connector>
+<LinkSegment orientation="v" length="231"/>
+<LinkSegment orientation="h" length="385"/>
+
+</Link>
+
+<Link linkId="LINK106" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>cConvUsinage</Text>
+<Connector attachedSymbolId="SYMB21" type="chnl" isOutside="TRUE" side="x" position="0.0" endType="midarrow">
+<Text id="1">[depose,
+Libre, reveil]
+</Text>
+<Text id="2"></Text>
+</Connector>
+<Connector attachedSymbolId="SYMB24" type="chnl" isOutside="TRUE" side="x" position="0.0" endType="midarrow">
+<Text id="1">[libererConv,
+convLibreM]
+</Text>
+<Text id="2"></Text>
+</Connector>
+<LinkSegment orientation="v" length="242"/>
+
+</Link>
+
+<Link linkId="LINK110" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>cDepotPieceTransf</Text>
+<Connector attachedSymbolId="SYMB22" type="chnl" isOutside="TRUE" side="y" position="0.0" endType="midarrow">
+<Text id="1">
+[retraitConf]
+</Text>
+<Text id="2"></Text>
+</Connector>
+<Connector attachedSymbolId="SYMB19" type="chnl" isOutside="TRUE" side="x" position="0.0" endType="midarrow">
+<Text id="1">[retraitReq]
+</Text>
+<Text id="2"></Text>
+</Connector>
+<LinkSegment orientation="h" length="407"/>
+<LinkSegment orientation="v" length="198"/>
+
+</Link>
+
+<Link linkId="LINK108" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>cDepotPieceBrute</Text>
+<Connector attachedSymbolId="SYMB22" type="chnl" isOutside="TRUE" side="y" position="0.0" endType="midarrow">
+<Text id="1">[depotConf,
+defaillance]
+</Text>
+<Text id="2"></Text>
+</Connector>
+<Connector attachedSymbolId="SYMB20" type="chnl" isOutside="TRUE" side="x" position="0.0" endType="midarrow">
+<Text id="1">[depotReq]
+</Text>
+<Text id="2"></Text>
+</Connector>
+<LinkSegment orientation="h" length="-385"/>
+<LinkSegment orientation="v" length="198"/>
+
+</Link>
+
+<Link linkId="LINK109" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>cUsinage</Text>
+<Connector attachedSymbolId="SYMB22" type="chnl" isOutside="TRUE" side="x" position="0.0" endType="midarrow">
+<Text id="1">[usinageConf,
+finUsinage,
+remiseConf,
+defaillance]
+</Text>
+<Text id="2"></Text>
+</Connector>
+<Connector attachedSymbolId="SYMB21" type="chnl" isOutside="TRUE" side="x" position="0.0" endType="midarrow">
+<Text id="1">[usinageReq,
+remiseReq, 
+depotFini]
+</Text>
+<Text id="2"></Text>
+</Connector>
+<LinkSegment orientation="v" length="187"/>
+
+</Link>
+
+<Link linkId="LINK111" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>cCreationPiece</Text>
+<Connector attachedSymbolId="SYMB23" type="chnl" isOutside="TRUE" side="x" position="0.0" endType="midarrow">
+<Text id="1">[machineEnPanne]
+</Text>
+<Text id="2"></Text>
+</Connector>
+<Connector attachedSymbolId="SYMB22" type="chnl" isOutside="TRUE" side="x" position="0.0" endType="midarrow">
+<Text id="1">[pieceArv]
+</Text>
+<Text id="2"></Text>
+</Connector>
+<LinkSegment orientation="v" length="154"/>
+
+</Link>
+</DiagramPartition>
+
+</Diagram>

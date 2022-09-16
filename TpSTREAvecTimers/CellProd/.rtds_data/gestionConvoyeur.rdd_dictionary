@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE DictionaryObjects SYSTEM "rtdsDictionaryObjects.dtd">
+
+<DictionaryObjects version="9620" language="sdl" diagramType="prcs">
+<Signal id="SIG1" name="libererConv">
+<UsingSymbols>
+<SymbolReference symbolId="SYM59" usingKind="input"/>
+<SymbolReference symbolId="SYM61" usingKind="input"/>
+</UsingSymbols>
+</Signal>
+<Signal id="SIG2" name="retP">
+<UsingSymbols>
+<SymbolReference symbolId="SYM150" usingKind="input"/>
+<SymbolReference symbolId="SYM141" usingKind="input"/>
+</UsingSymbols>
+</Signal>
+<Signal id="SIG3" name="convLibre">
+<UsingSymbols>
+<SymbolReference symbolId="SYM56" usingKind="input"/>
+</UsingSymbols>
+</Signal>
+<Signal id="SIG4" name="depose">
+<UsingSymbols>
+<SymbolReference symbolId="SYM153" usingKind="output"/>
+<SymbolReference symbolId="SYM131" usingKind="output"/>
+</UsingSymbols>
+</Signal>
+<Signal id="SIG5" name="Libre">
+<UsingSymbols>
+<SymbolReference symbolId="SYM148" usingKind="output"/>
+<SymbolReference symbolId="SYM138" usingKind="output"/>
+</UsingSymbols>
+</Signal>
+<Signal id="SIG6" name="convLibreM">
+<UsingSymbols>
+<SymbolReference symbolId="SYM152" usingKind="input"/>
+</UsingSymbols>
+</Signal>
+<Item id="ITEM1" type="process" name="gestionConvoyeur" scope="current" formalParameterOrder="-" isFormalParam="FALSE" isSyntype="FALSE">
+<Body>
+<SentSignals>
+<SignalReference id="SIG4"/>
+<SignalReference id="SIG5"/>
+</SentSignals>
+<ReceivedSignals>
+<SignalReference id="SIG1"/>
+<SignalReference id="SIG2"/>
+<SignalReference id="SIG6"/>
+<SignalReference id="SIG3"/>
+</ReceivedSignals>
+</Body>
+</Item>
+<Item id="ITEM10" type="variable" name="Th_Robot_Ret" scope="global" defined="FALSE" anchorItemId="ITEM1" searchPolicy="-1" formalParameterOrder="-" isFormalParam="FALSE" isSyntype="FALSE">
+</Item>
+<Item id="ITEM11" type="variable" name="conv2" scope="global" defined="FALSE" anchorItemId="ITEM1" searchPolicy="-1" formalParameterOrder="-" isFormalParam="FALSE" isSyntype="FALSE">
+<UsingSymbols>
+<SymbolReference symbolId="SYM97"/>
+<SymbolReference symbolId="SYM96"/>
+<SymbolReference symbolId="SYM85"/>
+<SymbolReference symbolId="SYM86"/>
+<SymbolReference symbolId="SYM112"/>
+<SymbolReference symbolId="SYM111"/>
+</UsingSymbols>
+</Item>
+<Item id="ITEM12" type="variable" name="sender" scope="global" defined="FALSE" anchorItemId="ITEM1" searchPolicy="-1" formalParameterOrder="-" isFormalParam="FALSE" isSyntype="FALSE">
+<UsingSymbols>
+<SymbolReference symbolId="SYM53"/>
+</UsingSymbols>
+</Item>
+<Item id="ITEM13" type="variable" name="false" scope="global" defined="FALSE" anchorItemId="ITEM1" searchPolicy="-1" formalParameterOrder="-" isFormalParam="FALSE" isSyntype="FALSE">
+<UsingSymbols>
+<SymbolReference symbolId="SYM88"/>
+<SymbolReference symbolId="SYM75"/>
+<SymbolReference symbolId="SYM137"/>
+<SymbolReference symbolId="SYM99"/>
+<SymbolReference symbolId="SYM95"/>
+<SymbolReference symbolId="SYM114"/>
+<SymbolReference symbolId="SYM27"/>
+<SymbolReference symbolId="SYM128"/>
+<SymbolReference symbolId="SYM25"/>
+<SymbolReference symbolId="SYM16"/>
+<SymbolReference symbolId="SYM146"/>
+<SymbolReference symbolId="SYM18"/>
+</UsingSymbols>
+</Item>
+<Item id="ITEM14" type="variable" name="NULL" scope="global" defined="FALSE" anchorItemId="ITEM1" searchPolicy="-1" formalParameterOrder="-" isFormalParam="FALSE" isSyntype="FALSE">
+<UsingSymbols>
+<SymbolReference symbolId="SYM34"/>
+</UsingSymbols>
+</Item>
+<Item id="ITEM15" type="variable" name="boolean" scope="global" defined="FALSE" anchorItemId="ITEM1" searchPolicy="-1" formalParameterOrder="-" isFormalParam="FALSE" isSyntype="FALSE">
+<UsingSymbols>
+<SymbolReference symbolId="SYM96"/>
+<SymbolReference symbolId="SYM129"/>
+<SymbolReference symbolId="SYM85"/>
+<SymbolReference symbolId="SYM133"/>
+<SymbolReference symbolId="SYM143"/>
+</UsingSymbols>
+</Item>
+<Item id="ITEM16" type="variable" name="x" scope="global" defined="FALSE" anchorItemId="ITEM1" searchPolicy="-1" formalParameterOrder="-" isFormalParam="FALSE" isSyntype="FALSE">
+</Item>
+<Item id="ITEM17" type="variable" name="conv1" scope="global" defined="FALSE" anchorItemId="ITEM1" searchPolicy="-1" formalParameterOrder="-" isFormalParam="FALSE" isSyntype="FALSE">
+<UsingSymbols>
+<SymbolReference symbolId="SYM73"/>
+<SymbolReference symbolId="SYM72"/>
+</UsingSymbols>
+</Item>
+<Item id="ITEM18" type="variable" name="t" scope="global" defined="FALSE" anchorItemId="ITEM1" searchPolicy="-1" formalParameterOrder="-" isFormalParam="FALSE" isSyntype="FALSE">
+</Item>
+<Item id="ITEM19" type="type" name="PID" scope="global" defined="FALSE" anchorItemId="ITEM1" searchPolicy="-1" formalParameterOrder="-" isFormalParam="FALSE" isSyntype="FALSE">
+<UsingSymbols>
+<SymbolReference symbolId="SYM34"/>
+</UsingSymbols>
+</Item>
+<Item id="ITEM2" type="variable" name="now" scope="global" defined="FALSE" anchorItemId="ITEM1" searchPolicy="-1" formalParameterOrder="-" isFormalParam="FALSE" isSyntype="FALSE">
+<UsingSymbols>
+<SymbolReference symbolId="SYM117"/>
+<SymbolReference symbolId="SYM67"/>
+<SymbolReference symbolId="SYM102"/>
+<SymbolReference symbolId="SYM79"/>
+<SymbolReference symbolId="SYM91"/>
+</UsingSymbols>
+</Item>
+<Item id="ITEM20" type="type" name="Integer" scope="global" defined="FALSE" anchorItemId="ITEM1" searchPolicy="-1" formalParameterOrder="-" isFormalParam="FALSE" isSyntype="FALSE">
+</Item>
+<Item id="ITEM21" type="variable" name="panne" parentId="ITEM1" scope="global" defined="FALSE" anchorItemId="ITEM1" searchPolicy="-1" formalParameterOrder="-" isFormalParam="FALSE" isSyntype="FALSE">
+<UsingSymbols>
+<SymbolReference symbolId="SYM126"/>
+<SymbolReference symbolId="SYM129"/>
+</UsingSymbols>
+</Item>
+<Item id="ITEM22" type="variable" name="panne2" parentId="ITEM1" scope="global" defined="FALSE" anchorItemId="ITEM1" searchPolicy="-1" formalParameterOrder="-" isFormalParam="FALSE" isSyntype="FALSE">
+<UsingSymbols>
+<SymbolReference symbolId="SYM135"/>
+<SymbolReference symbolId="SYM133"/>
+</UsingSymbols>
+</Item>
+<Item id="ITEM23" type="variable" name="conv" scope="global" defined="FALSE" anchorItemId="ITEM1" searchPolicy="-1" formalParameterOrder="-" isFormalParam="FALSE" isSyntype="FALSE">
+<UsingSymbols>
+<SymbolReference symbolId="SYM15"/>
+<SymbolReference symbolId="SYM32"/>
+<SymbolReference symbolId="SYM27"/>
+<SymbolReference symbolId="SYM24"/>
+<SymbolReference symbolId="SYM18"/>
+</UsingSymbols>
+</Item>
+<Item id="ITEM24" type="variable" name="panne" parentId="ITEM1" scope="none" variableTypeName="boolean" variableTypeId="ITEM5" formalParameterOrder="-" isFormalParam="FALSE" isSyntype="FALSE">
+<DefiningSymbols>
+<SymbolReference symbolId="SYM34" positions="3,0"/>
+</DefiningSymbols>
+</Item>
+<Item id="ITEM25" type="variable" name="robot" parentId="ITEM1" scope="none" variableTypeName="PID" variableTypeId="ITEM19" formalParameterOrder="-" isFormalParam="FALSE" isSyntype="FALSE">
+<DefiningSymbols>
+<SymbolReference symbolId="SYM34" positions="6,0"/>
+</DefiningSymbols>
+</Item>
+<Item id="ITEM26" type="variable" name="panne2" parentId="ITEM1" scope="none" variableTypeName="boolean" variableTypeId="ITEM5" formalParameterOrder="-" isFormalParam="FALSE" isSyntype="FALSE">
+<DefiningSymbols>
+<SymbolReference symbolId="SYM34" positions="4,0"/>
+</DefiningSymbols>
+</Item>
+<Item id="ITEM27" type="variable" name="panne3" parentId="ITEM1" scope="none" variableTypeName="boolean" variableTypeId="ITEM5" formalParameterOrder="-" isFormalParam="FALSE" isSyntype="FALSE">
+<DefiningSymbols>
+<SymbolReference symbolId="SYM34" positions="5,0"/>
+</DefiningSymbols>
+</Item>
+<Item id="ITEM28" type="state" name="att" parentId="ITEM1" scope="none" formalParameterOrder="-" isFormalParam="FALSE" isSyntype="FALSE">
+<DefiningSymbols>
+<SymbolReference symbolId="SYM55"/>
+</DefiningSymbols>
+<UsingSymbols>
+<SymbolReference symbolId="SYM3"/>
+<SymbolReference symbolId="SYM139"/>
+<SymbolReference symbolId="SYM149"/>
+</UsingSymbols>
+</Item>
+<Item id="ITEM29" type="state" name="ConvOccupe" parentId="ITEM1" scope="none" formalParameterOrder="-" isFormalParam="FALSE" isSyntype="FALSE">
+<DefiningSymbols>
+<SymbolReference symbolId="SYM58"/>
+</DefiningSymbols>
+<UsingSymbols>
+<SymbolReference symbolId="SYM154"/>
+<SymbolReference symbolId="SYM132"/>
+</UsingSymbols>
+</Item>
+<Item id="ITEM3" type="variable" name="any" scope="global" defined="FALSE" anchorItemId="ITEM1" searchPolicy="-1" formalParameterOrder="-" isFormalParam="FALSE" isSyntype="FALSE">
+<UsingSymbols>
+<SymbolReference symbolId="SYM96"/>
+<SymbolReference symbolId="SYM129"/>
+<SymbolReference symbolId="SYM85"/>
+<SymbolReference symbolId="SYM133"/>
+<SymbolReference symbolId="SYM143"/>
+</UsingSymbols>
+</Item>
+<Item id="ITEM30" type="connector" name="libererM" parentId="ITEM1" scope="none" defined="FALSE" formalParameterOrder="-" isFormalParam="FALSE" isSyntype="FALSE">
+<DefiningSymbols>
+<SymbolReference symbolId="SYM134"/>
+</DefiningSymbols>
+<UsingSymbols>
+<SymbolReference symbolId="SYM106"/>
+</UsingSymbols>
+</Item>
+<Item id="ITEM31" type="connector" name="libererP" parentId="ITEM1" scope="none" defined="FALSE" formalParameterOrder="-" isFormalParam="FALSE" isSyntype="FALSE">
+<DefiningSymbols>
+<SymbolReference symbolId="SYM142"/>
+</DefiningSymbols>
+<UsingSymbols>
+<SymbolReference symbolId="SYM151"/>
+</UsingSymbols>
+</Item>
+<Item id="ITEM32" type="state" name="Defaillance" parentId="ITEM1" scope="none" formalParameterOrder="-" isFormalParam="FALSE" isSyntype="FALSE">
+<UsingSymbols>
+<SymbolReference symbolId="SYM130"/>
+</UsingSymbols>
+</Item>
+<Item id="ITEM33" type="state" name="DefaillanceRetraitMachine" parentId="ITEM1" scope="none" formalParameterOrder="-" isFormalParam="FALSE" isSyntype="FALSE">
+<UsingSymbols>
+<SymbolReference symbolId="SYM140"/>
+</UsingSymbols>
+</Item>
+<Item id="ITEM34" type="state" name="DefaillanceRetraitRobot" parentId="ITEM1" scope="none" formalParameterOrder="-" isFormalParam="FALSE" isSyntype="FALSE">
+<UsingSymbols>
+<SymbolReference symbolId="SYM147"/>
+</UsingSymbols>
+</Item>
+<Item id="ITEM4" type="variable" name="sende" scope="global" defined="FALSE" anchorItemId="ITEM1" searchPolicy="-1" formalParameterOrder="-" isFormalParam="FALSE" isSyntype="FALSE">
+<UsingSymbols>
+<SymbolReference symbolId="SYM93"/>
+</UsingSymbols>
+</Item>
+<Item id="ITEM5" type="type" name="boolean" scope="global" defined="FALSE" anchorItemId="ITEM1" searchPolicy="-1" formalParameterOrder="-" isFormalParam="FALSE" isSyntype="FALSE">
+<UsingSymbols>
+<SymbolReference symbolId="SYM34"/>
+</UsingSymbols>
+</Item>
+<Item id="ITEM6" type="variable" name="true" scope="global" defined="FALSE" anchorItemId="ITEM1" searchPolicy="-1" formalParameterOrder="-" isFormalParam="FALSE" isSyntype="FALSE">
+<UsingSymbols>
+<SymbolReference symbolId="SYM127"/>
+<SymbolReference symbolId="SYM136"/>
+<SymbolReference symbolId="SYM74"/>
+<SymbolReference symbolId="SYM98"/>
+<SymbolReference symbolId="SYM26"/>
+<SymbolReference symbolId="SYM94"/>
+<SymbolReference symbolId="SYM113"/>
+<SymbolReference symbolId="SYM111"/>
+<SymbolReference symbolId="SYM87"/>
+<SymbolReference symbolId="SYM17"/>
+<SymbolReference symbolId="SYM145"/>
+<SymbolReference symbolId="SYM72"/>
+<SymbolReference symbolId="SYM32"/>
+</UsingSymbols>
+</Item>
+<Item id="ITEM7" type="variable" name="panne3" parentId="ITEM1" scope="global" defined="FALSE" anchorItemId="ITEM1" searchPolicy="-1" formalParameterOrder="-" isFormalParam="FALSE" isSyntype="FALSE">
+<UsingSymbols>
+<SymbolReference symbolId="SYM144"/>
+<SymbolReference symbolId="SYM143"/>
+</UsingSymbols>
+</Item>
+<Item id="ITEM8" type="variable" name="robot" parentId="ITEM1" scope="global" defined="FALSE" anchorItemId="ITEM1" searchPolicy="-1" formalParameterOrder="-" isFormalParam="FALSE" isSyntype="FALSE">
+</Item>
+<Item id="ITEM9" type="variable" name="pidAtt" scope="global" defined="FALSE" anchorItemId="ITEM1" searchPolicy="-1" formalParameterOrder="-" isFormalParam="FALSE" isSyntype="FALSE">
+<UsingSymbols>
+<SymbolReference symbolId="SYM53"/>
+</UsingSymbols>
+</Item>
+</DictionaryObjects>

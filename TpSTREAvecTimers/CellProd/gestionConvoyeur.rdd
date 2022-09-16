@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE Diagram SYSTEM "rtdsDiagram.dtd">
+
+<SdlFSMDiagram language="sdl" type="prcs" is_extract="FALSE" is_temporary="FALSE">
+<SdlFSMPartition name="" needs_cleanup="FALSE">
+<SdlFSMSymbol identifier="SYM34" type="sdlText" text="Timer defaillance;
+Timer defaillanceMachine;
+dcl
+ panne boolean,
+ panne2 boolean,
+ panne3 boolean,
+ robot PID := NULL;" outline_color="-" background_color="-" center_coordinates="171 80" dimensions="194 124" attached_symbol_id=""/>
+<NonStateTransition top_left_coordinates="356 38">
+<SdlFSMSymbol identifier="SYM1" type="sdlStart" outline_color="-" background_color="-" center_coordinates="386 53" dimensions="60 30" attached_symbol_id=""/>
+<Transition>
+<SdlFSMSymbol identifier="SYM3" type="sdlState" text="att" outline_color="-" background_color="-" center_coordinates="386 100" dimensions="60 40" attached_symbol_id=""/>
+</Transition>
+</NonStateTransition>
+<StateTransitionBlock top_left_coordinates="383 672">
+<SdlFSMSymbol identifier="SYM58" type="sdlState" text="ConvOccupe" outline_color="-" background_color="-" center_coordinates="431 692" dimensions="90 40" attached_symbol_id=""/>
+<NormalStateTransition>
+<SdlFSMSymbol identifier="SYM61" type="sdlInputSig" text="libererConv" outline_color="-" background_color="-" center_coordinates="431 744" dimensions="96 40" attached_symbol_id=""/>
+<Transition>
+<SdlFSMSymbol identifier="SYM106" type="sdlCnctrOut" text="libererM" outline_color="-" background_color="-" center_coordinates="431 796" dimensions="76 40" attached_symbol_id=""/>
+</Transition>
+</NormalStateTransition>
+<SaveTransition>
+<SdlFSMSymbol identifier="SYM63" type="sdlSaveSig" text="convLibre" outline_color="-" background_color="-" center_coordinates="530 744" dimensions="82 40" attached_symbol_id=""/>
+</SaveTransition>
+<NormalStateTransition>
+<SdlFSMSymbol identifier="SYM150" type="sdlInputSig" text="retP" outline_color="-" background_color="-" center_coordinates="619 744" dimensions="60 40" attached_symbol_id=""/>
+<Transition>
+<SdlFSMSymbol identifier="SYM151" type="sdlCnctrOut" text="libererP" outline_color="-" background_color="-" center_coordinates="619 796" dimensions="76 40" attached_symbol_id=""/>
+</Transition>
+</NormalStateTransition>
+<SaveTransition>
+<SdlFSMSymbol identifier="SYM155" type="sdlSaveSig" text="convLibreM" outline_color="-" background_color="-" center_coordinates="712 744" dimensions="90 40" attached_symbol_id=""/>
+</SaveTransition>
+</StateTransitionBlock>
+<StateTransitionBlock top_left_coordinates="72 193">
+<SdlFSMSymbol identifier="SYM55" type="sdlState" text="att" outline_color="-" background_color="-" center_coordinates="162 213" dimensions="60 40" attached_symbol_id=""/>
+<NormalStateTransition>
+<SdlFSMSymbol identifier="SYM56" type="sdlInputSig" text="convLibre" outline_color="-" background_color="-" center_coordinates="162 265" dimensions="82 40" attached_symbol_id=""/>
+<Transition>
+<SdlFSMSymbol identifier="SYM129" type="sdlTask" text="panne := any (boolean);" outline_color="-" background_color="-" center_coordinates="162 317" dimensions="180 40" attached_symbol_id=""/>
+<DecisionBlock>
+<SdlFSMSymbol identifier="SYM126" type="sdlDecision" text="panne" outline_color="-" background_color="-" center_coordinates="162 369" dimensions="60 40" attached_symbol_id=""/>
+<DecisionBranch>
+<SdlFSMSymbol identifier="SYM127" type="sdlAnswer" text="true" outline_color="-" background_color="-" center_coordinates="162 421" dimensions="60 40" attached_symbol_id=""/>
+<Transition>
+<SdlFSMSymbol identifier="SYM130" type="sdlState" text="Defaillance" outline_color="-" background_color="-" center_coordinates="162 473" dimensions="96 40" attached_symbol_id=""/>
+</Transition>
+</DecisionBranch>
+<DecisionBranch>
+<SdlFSMSymbol identifier="SYM128" type="sdlAnswer" text="false" outline_color="-" background_color="-" center_coordinates="286 421" dimensions="60 40" attached_symbol_id=""/>
+<Transition>
+<SdlFSMSymbol identifier="SYM131" type="sdlSendSig" text="depose to sender" outline_color="-" background_color="-" center_coordinates="286 473" dimensions="132 40" attached_symbol_id=""/>
+<SdlFSMSymbol identifier="SYM132" type="sdlState" text="ConvOccupe" outline_color="-" background_color="-" center_coordinates="286 525" dimensions="90 40" attached_symbol_id=""/>
+</Transition>
+</DecisionBranch>
+</DecisionBlock>
+</Transition>
+</NormalStateTransition>
+<NormalStateTransition>
+<SdlFSMSymbol identifier="SYM59" type="sdlInputSig" text="libererConv" outline_color="-" background_color="-" center_coordinates="459 265" dimensions="96 40" attached_symbol_id=""/>
+<Transition>
+<SdlFSMSymbol identifier="SYM134" type="sdlCnctrIn" text="libererM" outline_color="-" background_color="-" center_coordinates="459 317" dimensions="126 40" attached_symbol_id=""/>
+<SdlFSMSymbol identifier="SYM133" type="sdlTask" text="panne2 := any (boolean);" outline_color="-" background_color="-" center_coordinates="459 369" dimensions="188 40" attached_symbol_id=""/>
+<DecisionBlock>
+<SdlFSMSymbol identifier="SYM135" type="sdlDecision" text="panne2" outline_color="-" background_color="-" center_coordinates="459 421" dimensions="62 40" attached_symbol_id=""/>
+<DecisionBranch>
+<SdlFSMSymbol identifier="SYM136" type="sdlAnswer" text="true" outline_color="-" background_color="-" center_coordinates="459 473" dimensions="60 40" attached_symbol_id=""/>
+<Transition>
+<SdlFSMSymbol identifier="SYM140" type="sdlState" text="DefaillanceRetraitMachine" outline_color="-" background_color="-" center_coordinates="459 525" dimensions="194 40" attached_symbol_id=""/>
+</Transition>
+</DecisionBranch>
+<DecisionBranch>
+<SdlFSMSymbol identifier="SYM137" type="sdlAnswer" text="false" outline_color="-" background_color="-" center_coordinates="628 473" dimensions="60 40" attached_symbol_id=""/>
+<Transition>
+<SdlFSMSymbol identifier="SYM138" type="sdlSendSig" text="Libre to sender" outline_color="-" background_color="-" center_coordinates="628 525" dimensions="124 40" attached_symbol_id=""/>
+<SdlFSMSymbol identifier="SYM139" type="sdlState" text="att" outline_color="-" background_color="-" center_coordinates="628 577" dimensions="60 40" attached_symbol_id=""/>
+</Transition>
+</DecisionBranch>
+</DecisionBlock>
+</Transition>
+</NormalStateTransition>
+<NormalStateTransition>
+<SdlFSMSymbol identifier="SYM141" type="sdlInputSig" text="retP" outline_color="-" background_color="-" center_coordinates="794 265" dimensions="60 40" attached_symbol_id=""/>
+<Transition>
+<SdlFSMSymbol identifier="SYM142" type="sdlCnctrIn" text="libererP" outline_color="-" background_color="-" center_coordinates="794 317" dimensions="126 40" attached_symbol_id=""/>
+<SdlFSMSymbol identifier="SYM143" type="sdlTask" text="panne3 := any (boolean);" outline_color="-" background_color="-" center_coordinates="794 369" dimensions="188 40" attached_symbol_id=""/>
+<DecisionBlock>
+<SdlFSMSymbol identifier="SYM144" type="sdlDecision" text="panne3" outline_color="-" background_color="-" center_coordinates="794 421" dimensions="62 40" attached_symbol_id=""/>
+<DecisionBranch>
+<SdlFSMSymbol identifier="SYM145" type="sdlAnswer" text="true" outline_color="-" background_color="-" center_coordinates="794 473" dimensions="60 40" attached_symbol_id=""/>
+<Transition>
+<SdlFSMSymbol identifier="SYM147" type="sdlState" text="DefaillanceRetraitRobot" outline_color="-" background_color="-" center_coordinates="794 525" dimensions="180 40" attached_symbol_id=""/>
+</Transition>
+</DecisionBranch>
+<DecisionBranch>
+<SdlFSMSymbol identifier="SYM146" type="sdlAnswer" text="false" outline_color="-" background_color="-" center_coordinates="956 473" dimensions="60 40" attached_symbol_id=""/>
+<Transition>
+<SdlFSMSymbol identifier="SYM148" type="sdlSendSig" text="Libre to sender" outline_color="-" background_color="-" center_coordinates="956 525" dimensions="124 40" attached_symbol_id=""/>
+<SdlFSMSymbol identifier="SYM149" type="sdlState" text="att" outline_color="-" background_color="-" center_coordinates="956 577" dimensions="60 40" attached_symbol_id=""/>
+</Transition>
+</DecisionBranch>
+</DecisionBlock>
+</Transition>
+</NormalStateTransition>
+<NormalStateTransition>
+<SdlFSMSymbol identifier="SYM152" type="sdlInputSig" text="convLibreM" outline_color="-" background_color="-" center_coordinates="1094 265" dimensions="90 40" attached_symbol_id=""/>
+<Transition>
+<SdlFSMSymbol identifier="SYM153" type="sdlSendSig" text="depose to sender" outline_color="-" background_color="-" center_coordinates="1094 317" dimensions="132 40" attached_symbol_id=""/>
+<SdlFSMSymbol identifier="SYM154" type="sdlState" text="ConvOccupe" outline_color="-" background_color="-" center_coordinates="1094 369" dimensions="90 40" attached_symbol_id=""/>
+</Transition>
+</NormalStateTransition>
+</StateTransitionBlock>
+<PageSpecification pageWidth="21.0" pageHeight="29.7" topMargin="1.0" bottomMargin="1.0" leftMargin="1.0" rightMargin="1.0" pageFooter="TRUE" scaleFactor="1.0"/>
+</SdlFSMPartition>
+</SdlFSMDiagram>

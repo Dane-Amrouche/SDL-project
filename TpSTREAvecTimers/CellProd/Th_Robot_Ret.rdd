@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE Diagram SYSTEM "rtdsDiagram.dtd">
+
+<SdlFSMDiagram language="sdl" type="prcs" is_extract="FALSE" is_temporary="FALSE">
+<SdlFSMPartition name="" needs_cleanup="FALSE">
+<SdlFSMSymbol identifier="SYM16" type="sdlText" text="TIMER defaillRobotRet;
+dcl 
+ idP PID,
+ panne boolean;" outline_color="-" background_color="-" center_coordinates="152 94" dimensions="174 80" attached_symbol_id=""/>
+<NonStateTransition top_left_coordinates="124 196">
+<SdlFSMSymbol identifier="SYM1" type="sdlStart" outline_color="-" background_color="-" center_coordinates="154 211" dimensions="60 30" attached_symbol_id=""/>
+<Transition>
+<SdlFSMSymbol identifier="SYM2" type="sdlState" text="Idle" outline_color="-" background_color="-" center_coordinates="154 258" dimensions="60 40" attached_symbol_id=""/>
+</Transition>
+</NonStateTransition>
+<StateTransitionBlock top_left_coordinates="37 318">
+<SdlFSMSymbol identifier="SYM4" type="sdlState" text="Idle" outline_color="-" background_color="-" center_coordinates="154 338" dimensions="60 40" attached_symbol_id=""/>
+<NormalStateTransition>
+<SdlFSMSymbol identifier="SYM5" type="sdlInputSig" text="retraitReq" outline_color="-" background_color="-" center_coordinates="154 390" dimensions="90 40" attached_symbol_id=""/>
+<Transition>
+<SdlFSMSymbol identifier="SYM33" type="sdlInitTimer" text="Set (now+20, defaillRobotRet)" outline_color="-" background_color="-" center_coordinates="154 442" dimensions="234 40" attached_symbol_id=""/>
+<SdlFSMSymbol identifier="SYM15" type="sdlTask" text="idP := sender;" outline_color="-" background_color="-" center_coordinates="154 494" dimensions="118 40" attached_symbol_id=""/>
+<SdlFSMSymbol identifier="SYM34" type="sdlSendSig" text="retP to gestionConvoyeur" outline_color="-" background_color="-" center_coordinates="154 546" dimensions="188 40" attached_symbol_id=""/>
+<SdlFSMSymbol identifier="SYM35" type="sdlState" text="attConv" outline_color="-" background_color="-" center_coordinates="154 598" dimensions="68 40" attached_symbol_id=""/>
+</Transition>
+</NormalStateTransition>
+<SaveTransition>
+<SdlFSMSymbol identifier="SYM13" type="sdlSaveSig" text="retraitReq" outline_color="-" background_color="-" center_coordinates="326 390" dimensions="90 40" attached_symbol_id=""/>
+</SaveTransition>
+</StateTransitionBlock>
+<StateTransitionBlock top_left_coordinates="480 224">
+<SdlFSMSymbol identifier="SYM11" type="sdlState" text="attConv" outline_color="-" background_color="-" center_coordinates="573 244" dimensions="68 40" attached_symbol_id=""/>
+<NormalStateTransition>
+<SdlFSMSymbol identifier="SYM12" type="sdlInputSig" text="Libre" outline_color="-" background_color="-" center_coordinates="573 296" dimensions="60 40" attached_symbol_id=""/>
+<Transition>
+<SdlFSMSymbol identifier="SYM38" type="sdlResetTimer" text="reset(defaillRobotRet)" outline_color="-" background_color="-" center_coordinates="573 348" dimensions="186 40" attached_symbol_id=""/>
+<SdlFSMSymbol identifier="SYM14" type="sdlSendSig" text="retraitConf to idP" outline_color="-" background_color="-" center_coordinates="573 400" dimensions="146 40" attached_symbol_id=""/>
+<SdlFSMSymbol identifier="SYM17" type="sdlState" text="Idle" outline_color="-" background_color="-" center_coordinates="573 452" dimensions="60 40" attached_symbol_id=""/>
+</Transition>
+</NormalStateTransition>
+<SaveTransition>
+<SdlFSMSymbol identifier="SYM18" type="sdlSaveSig" text="retraitReq" outline_color="-" background_color="-" center_coordinates="721 296" dimensions="90 40" attached_symbol_id=""/>
+</SaveTransition>
+<NormalStateTransition>
+<SdlFSMSymbol identifier="SYM36" type="sdlInputSig" text="defaillRobotRet" outline_color="-" background_color="-" center_coordinates="866 296" dimensions="124 40" attached_symbol_id=""/>
+<Transition>
+<SdlFSMSymbol identifier="SYM37" type="sdlState" text="DEfaillanceRobotRetrait" outline_color="-" background_color="-" center_coordinates="866 348" dimensions="180 40" attached_symbol_id=""/>
+</Transition>
+</NormalStateTransition>
+</StateTransitionBlock>
+<PageSpecification pageWidth="21.0" pageHeight="29.7" topMargin="1.0" bottomMargin="1.0" leftMargin="1.0" rightMargin="1.0" pageFooter="TRUE" scaleFactor="1.0"/>
+</SdlFSMPartition>
+</SdlFSMDiagram>

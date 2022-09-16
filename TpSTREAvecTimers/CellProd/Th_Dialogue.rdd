@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE Diagram SYSTEM "rtdsDiagram.dtd">
+
+<SdlFSMDiagram language="sdl" type="prcs" is_extract="FALSE" is_temporary="FALSE">
+<SdlFSMPartition name="" needs_cleanup="FALSE">
+<SdlFSMSymbol identifier="SYM58" type="sdlText" text="dcl 
+ index Integer := 0,
+ machines machinesArray;" outline_color="-" background_color="-" center_coordinates="793 45" dimensions="188 64" attached_symbol_id=""/>
+<StateTransitionBlock top_left_coordinates="684 183">
+<SdlFSMSymbol identifier="SYM44" type="sdlState" text="Idle" outline_color="-" background_color="-" center_coordinates="827 203" dimensions="60 40" attached_symbol_id=""/>
+<NormalStateTransition>
+<SdlFSMSymbol identifier="SYM45" type="sdlInputSig" text="piece (index)" outline_color="-" background_color="-" center_coordinates="827 255" dimensions="110 40" attached_symbol_id=""/>
+<Transition>
+<SdlFSMSymbol identifier="SYM46" type="sdlPrcsCreation" text="Th_Piece" outline_color="-" background_color="-" center_coordinates="827 307" dimensions="76 40" attached_symbol_id=""/>
+<SdlFSMSymbol identifier="SYM47" type="sdlSendSig" text="pieceArv(machines(index)) to offspring" outline_color="-" background_color="-" center_coordinates="827 359" dimensions="286 40" attached_symbol_id=""/>
+<SdlFSMSymbol identifier="SYM59" type="sdlState" text="Idle" outline_color="-" background_color="-" center_coordinates="827 411" dimensions="60 40" attached_symbol_id=""/>
+</Transition>
+</NormalStateTransition>
+</StateTransitionBlock>
+<NonStateTransition top_left_coordinates="116 78">
+<SdlFSMSymbol identifier="SYM49" type="sdlStart" outline_color="-" background_color="-" center_coordinates="231 93" dimensions="60 30" attached_symbol_id=""/>
+<Transition>
+<SdlFSMSymbol identifier="SYM50" type="sdlCnctrIn" text="Iter" outline_color="-" background_color="-" center_coordinates="231 140" dimensions="110 40" attached_symbol_id=""/>
+<DecisionBlock>
+<SdlFSMSymbol identifier="SYM51" type="sdlDecision" text="index" outline_color="-" background_color="-" center_coordinates="231 192" dimensions="60 40" attached_symbol_id=""/>
+<DecisionBranch>
+<SdlFSMSymbol identifier="SYM52" type="sdlAnswer" text="&lt; nbrMachines" outline_color="-" background_color="-" center_coordinates="231 244" dimensions="110 40" attached_symbol_id=""/>
+<Transition>
+<SdlFSMSymbol identifier="SYM54" type="sdlPrcsCreation" text="Th_Machine" outline_color="-" background_color="-" center_coordinates="231 296" dimensions="90 40" attached_symbol_id=""/>
+<SdlFSMSymbol identifier="SYM55" type="sdlTask" text="index := index + 1;
+machines (index) := offspring;" outline_color="-" background_color="-" center_coordinates="231 353" dimensions="230 50" attached_symbol_id=""/>
+<SdlFSMSymbol identifier="SYM56" type="sdlCnctrOut" text="Iter" outline_color="-" background_color="-" center_coordinates="231 410" dimensions="60 40" attached_symbol_id=""/>
+</Transition>
+</DecisionBranch>
+<DecisionBranch>
+<SdlFSMSymbol identifier="SYM53" type="sdlAnswer" text="else" outline_color="-" background_color="-" center_coordinates="386 244" dimensions="60 40" attached_symbol_id=""/>
+<Transition>
+<SdlFSMSymbol identifier="SYM57" type="sdlState" text="Idle" outline_color="-" background_color="-" center_coordinates="386 296" dimensions="60 40" attached_symbol_id=""/>
+</Transition>
+</DecisionBranch>
+</DecisionBlock>
+</Transition>
+</NonStateTransition>
+<PageSpecification pageWidth="21.0" pageHeight="29.7" topMargin="1.0" bottomMargin="1.0" leftMargin="1.0" rightMargin="1.0" pageFooter="TRUE" scaleFactor="1.0"/>
+</SdlFSMPartition>
+</SdlFSMDiagram>
